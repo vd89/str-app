@@ -26,7 +26,8 @@
     "format": "prettier --write \"**/*.{js,jsx,md,html}\"",
     "lint": "turbo run lint",
     "test": "turbo run test",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint-front": "lint-staged"
   },
   "dependencies": {},
   "devDependencies": {
