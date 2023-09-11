@@ -2,5 +2,15 @@
   "name": "eslint-config-custom",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-turbo": "^1.10.13",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

@@ -17,9 +17,23 @@
   "packageManager": "yarn@1.22.19",
   "engines": {
     "node": ">=16.0.0",
-    "npm":">=8.0.0"
+    "npm": ">=8.0.0"
   },
-  "scripts": {},
+  "scripts": {
+    "build": "turbo run build",
+    "clean": "turbo run clean",
+    "dev": "turbo run dev",
+    "format": "prettier --write \"**/*.{js,jsx,md,html}\"",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "prepare": "husky install"
+  },
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "eslint-config-custom": "*",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "prettier": "3.0.3",
+    "turbo": "^1.10.13"
+  }
 }
