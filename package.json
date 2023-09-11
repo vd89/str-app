@@ -35,5 +35,13 @@
     "lint-staged": "^14.0.1",
     "prettier": "3.0.3",
     "turbo": "^1.10.13"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx, jsx}": [
+      "eslint --quiet --fix"
+    ],
+    "*.{json,md,html,js,jsx,ts,tsx}": [
+      "prettier --write"
+    ]
   }
 }
