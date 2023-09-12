@@ -6,6 +6,10 @@
   "author": "Dax <dixitvora@gmail.com>",
   "license": "MIT",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
   "workspaces": [
     "apps/*",
     "packages/*"
@@ -27,7 +31,7 @@
     "lint": "turbo run lint",
     "test": "turbo run test",
     "prepare": "husky install",
-    "lint-front": "lint-staged"
+    "lint-stage": "lint-staged"
   },
   "dependencies": {},
   "devDependencies": {
@@ -38,10 +42,10 @@
     "turbo": "^1.10.13"
   },
   "lint-staged": {
-    "*.{js,ts,tsx, jsx}": [
+    "**/*.{js,ts,tsx, jsx}": [
       "eslint --quiet --fix"
     ],
-    "*.{json,md,html,js,jsx,ts,tsx}": [
+    "**/*.{json,md,html,js,jsx,ts,tsx}": [
       "prettier --write"
     ]
   }
