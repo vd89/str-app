@@ -26,12 +26,15 @@
   "scripts": {
     "build": "turbo run build",
     "clean": "turbo run clean",
+    "serve": "turbo run build && turbo run serve",
     "dev": "turbo run dev",
     "format": "prettier --write \"**/*.{js,jsx,md,html}\"",
     "lint": "turbo run lint",
     "test": "turbo run test",
     "prepare": "husky install",
-    "lint-stage": "lint-staged"
+    "lint-stage": "lint-staged",
+    "db-init": "docker compose -f database/docker-compose.yaml up -d"
+    
   },
   "dependencies": {},
   "devDependencies": {
