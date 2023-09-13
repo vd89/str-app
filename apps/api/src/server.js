@@ -1,6 +1,9 @@
 import express, {json, urlencoded} from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
+import swaggerJsdoc from 'swagger-jsdoc';
+import {serve as swaggerServe, setup as swaggerSetup} from 'swagger-ui-express';
+import swaggerDoc from './swaggerDoc.json' assert {type: 'json'};
 
 export const createServer = () => {
   const app = express();
@@ -10,6 +13,7 @@ export const createServer = () => {
     .use(urlencoded({extended: true}))
     .use(cors())
     .use(helmet())
+    .use('/api-docs', swaggerServe, swaggerSetup(swaggerDoc))
     .get('/', (req, res, next) => {
       try {
         const healthCheck = {

@@ -12,9 +12,11 @@
   },
   "devDependencies": {
     "eslint": "^8.49.0",
-    "eslint-config-custom-server": "*"
+    "eslint-config-custom-server": "*",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0"
   },
   "scripts": {
-    "dev": "node --watch index.js"
+    "dev": "node --es-module-specifier-resolution=node --no-warnings --watch index.js"
   }
 }
